@@ -1,6 +1,8 @@
+Node
+CheckButton
+Panel
 Label
 TextEdit
-Panel
 VBoxContainer
 TextureRect
 PanelContainer
