@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://h0lxn246e51v"]
+
+[node name="PanelContainer" type="PanelContainer"]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+
+[node name="head" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 60.0
+offset_bottom = 61.0
+
+[node name="name" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 17.0
+offset_right = 108.0
+offset_bottom = 40.0
+text = "名字
+"
+
+[node name="content" type="Label" parent="Panel"]
+offset_left = 70.0
+offset_top = 40.0
+offset_right = 177.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 15
+text = "帖子的内容......
+"
