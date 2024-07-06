@@ -63,6 +63,10 @@ func _create_inspiration_button(inspiration):
 	var random_y = randi() % int(panel_size.y - button.size.y)
 	button.position = Vector2(random_x, random_y)
 	
+	# 随机选择并播放一个inspire音效
+	var random_inspire = "inspire" + str(randi() % 6 + 1)
+	SoundManager.play_sfx(random_inspire)
+	
 	# 设置一个定时器来处理按钮的淡出和移除
 	var out_timer = Timer.new()
 	out_timer.wait_time = button_display_duration
@@ -75,6 +79,7 @@ func _on_button_pressed(button):
 	print("Button pressed: ", button.text)
 	emit_signal("button_clicked", button)
 	button.queue_free()
+	SoundManager.play_sfx("collect")
 
 func _on_out_timer_timeout(button):
 	if button != null:

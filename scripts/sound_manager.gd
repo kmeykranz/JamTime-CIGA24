@@ -10,6 +10,7 @@ var current_bgm: AudioStream = null
 # 音效资源路径字典
 var sfx_paths = {
 	"alarm": "res://assets/sound/sfx/alarm.mp3",
+	"alarm-single": "res://assets/sound/sfx/alarm-single.mp3",
 	"click": "res://assets/sound/sfx/click.mp3",
 	"clocking": "res://assets/sound/sfx/clocking.mp3",
 	"collect": "res://assets/sound/sfx/collect.mp3",

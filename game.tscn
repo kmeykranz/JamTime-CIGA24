@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b1tie2vwgp08j"]
+[gd_scene load_steps=24 format=3 uid="uid://b1tie2vwgp08j"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_po0t0"]
 [ext_resource type="PackedScene" uid="uid://ctde0c5f4rns1" path="res://media.tscn" id="1_ss3na"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://c6ajvcaco27te" path="res://assets/game/coffee.png" id="11_4ihxk"]
 [ext_resource type="Theme" uid="uid://bl2g4bkbjpwd1" path="res://assets/button_themes/start_game_button_theme.tres" id="11_p1uix"]
 [ext_resource type="Texture2D" uid="uid://tjmids5niwy0" path="res://assets/game/finish.png" id="13_kcrr0"]
+[ext_resource type="AudioStream" uid="uid://cnqxikqx5veui" path="res://assets/sound/sfx/alarm-single.mp3" id="14_1xcds"]
+[ext_resource type="AudioStream" uid="uid://cucnh1omj8t82" path="res://assets/sound/sfx/alarm.mp3" id="15_1pkpb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uiv07"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -170,6 +172,14 @@ scale = Vector2(0.195, 0.195)
 theme_override_styles/normal = SubResource("StyleBoxFlat_27m5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_u544i")
 icon = ExtResource("13_kcrr0")
+
+[node name="didi" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_1xcds")
+volume_db = 6.0
+
+[node name="didididi" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_1pkpb")
+volume_db = 6.0
 
 [connection signal="liked" from="Media" to="Idea" method="_on_media_liked"]
 [connection signal="button_clicked" from="Idea" to="Output" method="_on_idea_button_clicked"]
