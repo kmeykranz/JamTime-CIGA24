@@ -12,34 +12,49 @@ script/source = "extends Panel
 "
 
 [node name="Media" type="Control"]
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.43
 offset_right = -723.0
+offset_bottom = 1.42999
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gb55f")
 
 [node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 0
-offset_right = 428.0
-offset_bottom = 542.0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 430.0
+offset_bottom = 545.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ee62d")
 script = SubResource("GDScript_d6nd6")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 0
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 415.0
-offset_bottom = 530.0
+offset_left = 14.0
+offset_top = -3.0
+offset_right = 375.0
+offset_bottom = 536.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+
+[node name="Blank" type="Control" parent="Panel/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 46.915)
 layout_mode = 2
 
 [node name="Post" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
+name_text = "mambo"
+content_text = "我喜欢梓涵"
+head_number = "1"
 
 [node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post"]
 metadata/Word = "肉鸽"
@@ -51,6 +66,7 @@ metadata/Type = "类型"
 
 [node name="Post2" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
+head_number = "2"
 
 [node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post2"]
 metadata/Word = "食物"
@@ -62,6 +78,7 @@ metadata/Type = "内容"
 
 [node name="Post3" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
+head_number = "5"
 
 [node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post3"]
 metadata/Word = "汽车"

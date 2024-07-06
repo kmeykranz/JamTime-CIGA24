@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1tie2vwgp08j"]
+[gd_scene load_steps=18 format=3 uid="uid://b1tie2vwgp08j"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_po0t0"]
 [ext_resource type="PackedScene" uid="uid://ctde0c5f4rns1" path="res://media.tscn" id="1_ss3na"]
@@ -7,6 +7,26 @@
 [ext_resource type="Texture2D" uid="uid://iexcbe8xbk0h" path="res://assets/game/主颜色.png" id="3_6gost"]
 [ext_resource type="Script" path="res://Output.gd" id="3_yb7ng"]
 [ext_resource type="Texture2D" uid="uid://dh4eyitpfrd3y" path="res://assets/game/主线稿.png" id="7_dws2a"]
+[ext_resource type="Texture2D" uid="uid://crry0hw2pspkq" path="res://assets/game/clock.png" id="8_en80w"]
+[ext_resource type="Texture2D" uid="uid://cqdx3285yjly5" path="res://assets/game/文字.png" id="8_rbans"]
+[ext_resource type="Texture2D" uid="uid://x1onmbvmipvw" path="res://assets/game/white.png" id="10_3sbsa"]
+[ext_resource type="Texture2D" uid="uid://c6ajvcaco27te" path="res://assets/game/coffee.png" id="11_4ihxk"]
+[ext_resource type="Theme" uid="uid://bl2g4bkbjpwd1" path="res://assets/button_themes/start_game_button_theme.tres" id="11_p1uix"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uiv07"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bx6hf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d2kf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn0t2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kptii"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vyggy"]
 font_color = Color(1, 0, 1, 1)
@@ -39,10 +59,10 @@ texture = ExtResource("3_6gost")
 
 [node name="Media" parent="." instance=ExtResource("1_ss3na")]
 layout_mode = 1
-offset_left = 210.0
-offset_top = 79.0
-offset_right = 210.0
-offset_bottom = 79.0
+offset_left = 227.78
+offset_top = 84.345
+offset_right = 227.78
+offset_bottom = 84.345
 scale = Vector2(0.925, 0.925)
 
 [node name="Idea" type="Panel" parent="."]
@@ -51,6 +71,7 @@ offset_left = 659.0
 offset_top = 96.0
 offset_right = 1086.0
 offset_bottom = 321.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uiv07")
 script = ExtResource("2_kx3pv")
 
 [node name="Output" type="Panel" parent="."]
@@ -59,6 +80,7 @@ offset_left = 657.0
 offset_top = 371.0
 offset_right = 1088.0
 offset_bottom = 577.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bx6hf")
 script = ExtResource("3_yb7ng")
 
 [node name="Outline" type="TextureRect" parent="."]
@@ -72,7 +94,7 @@ texture = ExtResource("7_dws2a")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 12.0
 
-[node name="Clock" type="Label" parent="."]
+[node name="FinishButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 414.0
@@ -90,7 +112,65 @@ offset_right = 1143.0
 offset_bottom = 609.0
 text = "Finish"
 
+[node name="Clock" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_en80w")
+expand_mode = 2
+
+[node name="Clock_Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 320.0
+offset_right = 125.0
+offset_bottom = 398.0
+theme_override_font_sizes/font_size = 40
+text = "10"
+
+[node name="Text" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_3sbsa")
+expand_mode = 2
+
+[node name="Text" type="TextureRect" parent="Text"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_rbans")
+expand_mode = 2
+
+[node name="CoffeeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 430.0
+offset_right = 543.0
+offset_bottom = 1086.0
+scale = Vector2(0.26, 0.26)
+theme = ExtResource("11_p1uix")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5d2kf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bn0t2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bn0t2")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bn0t2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kptii")
+icon = ExtResource("11_4ihxk")
+flat = true
+
 [connection signal="liked" from="Media" to="Idea" method="_on_media_liked"]
 [connection signal="button_clicked" from="Idea" to="Output" method="_on_idea_button_clicked"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="FinishButton" to="." method="_on_button_pressed"]
