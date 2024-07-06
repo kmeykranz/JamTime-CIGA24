@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctde0c5f4rns1"]
+[gd_scene load_steps=3 format=3 uid="uid://ctde0c5f4rns1"]
 
+[ext_resource type="Script" path="res://media.gd" id="1_gb55f"]
 [ext_resource type="PackedScene" uid="uid://h0lxn246e51v" path="res://post.tscn" id="1_xnmd3"]
 
 [node name="Media" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gb55f")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -25,13 +27,39 @@ offset_bottom = 615.395
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
 layout_mode = 2
 
-[node name="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+[node name="Post" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
 
-[node name="Node" type="Node" parent="Panel/ScrollContainer/VBoxContainer/PanelContainer"]
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post"]
+metadata/Word = "肉鸽"
+metadata/Type = "玩法"
 
-[node name="PanelContainer2" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post"]
+metadata/Word = "类银河城"
+metadata/Type = "玩法"
+
+[node name="Post2" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
 
-[node name="PanelContainer3" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post2"]
+metadata/Word = "3D"
+metadata/Type = "视角"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post2"]
+metadata/Word = "2D"
+metadata/Type = "视角"
+
+[node name="Post3" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post3"]
+metadata/Word = "肉鸽"
+metadata/Type = "玩法"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post3"]
+metadata/Word = "类银河城"
+metadata/Type = "玩法"
+
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post2" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post3" to="." method="_on_post_liked"]

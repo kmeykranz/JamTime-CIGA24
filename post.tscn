@@ -1,9 +1,12 @@
-[gd_scene format=3 uid="uid://h0lxn246e51v"]
+[gd_scene load_steps=2 format=3 uid="uid://h0lxn246e51v"]
 
-[node name="PanelContainer" type="PanelContainer"]
+[ext_resource type="Script" path="res://post.gd" id="1_wmleq"]
+
+[node name="Post" type="PanelContainer"]
 custom_minimum_size = Vector2(400, 400)
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_wmleq")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
@@ -34,7 +37,7 @@ theme_override_font_sizes/font_size = 15
 text = "帖子的内容......
 "
 
-[node name="Panel" type="Panel" parent="Panel"]
+[node name="image" type="Panel" parent="Panel"]
 layout_mode = 0
 offset_left = 19.0
 offset_top = 84.0
@@ -47,3 +50,5 @@ offset_left = 323.0
 offset_top = 28.0
 offset_right = 367.0
 offset_bottom = 52.0
+
+[connection signal="pressed" from="Panel/like" to="." method="_on_like_pressed"]
