@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://h0lxn246e51v"]
+[gd_scene load_steps=11 format=3 uid="uid://h0lxn246e51v"]
 
 [ext_resource type="Script" path="res://post.gd" id="1_wmleq"]
 [ext_resource type="Texture2D" uid="uid://dgy2e81856028" path="res://assets/post/大框.png" id="2_6h7ak"]
+[ext_resource type="Texture2D" uid="uid://ntsv7purbdc8" path="res://assets/post/点赞颜色.png" id="3_l613t"]
+[ext_resource type="Texture2D" uid="uid://s8kex7fm1k2r" path="res://assets/post/点赞线稿.png" id="3_y2k8f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w18qg"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -11,6 +13,16 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o532a"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ot110"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_80l31"]
+texture = ExtResource("3_l613t")
+modulate_color = Color(0.611765, 0.611765, 0.611765, 0.552941)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4d3m7"]
+texture = ExtResource("3_l613t")
 
 [node name="Post" type="PanelContainer"]
 custom_minimum_size = Vector2(350, 400)
@@ -73,11 +85,19 @@ theme_override_font_sizes/font_size = 15
 text = "帖子的内容......
 "
 
-[node name="like" type="CheckButton" parent="Panel"]
+[node name="like" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 300.0
-offset_top = 28.0
-offset_right = 344.0
-offset_bottom = 52.0
+offset_left = 275.0
+offset_top = 21.0
+offset_right = 751.0
+offset_bottom = 497.0
+scale = Vector2(0.075, 0.075)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ot110")
+theme_override_styles/hover = SubResource("StyleBoxTexture_80l31")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4d3m7")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_4d3m7")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4d3m7")
+toggle_mode = true
+icon = ExtResource("3_y2k8f")
 
 [connection signal="pressed" from="Panel/like" to="." method="_on_like_pressed"]

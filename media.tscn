@@ -53,7 +53,7 @@ layout_mode = 2
 [node name="Post" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
 name_text = "mambo"
-content_text = "我喜欢梓涵"
+content_text = "刚刚完成了一个模拟城市建设游戏的新扩展包，新增了大量新的建筑和交通选项。期待玩家们的反馈和建议！"
 head_number = "1"
 
 [node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post"]
@@ -66,6 +66,7 @@ metadata/Type = "类型"
 
 [node name="Post2" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
+content_text = "游戏的音乐和音效设计是我最喜欢的部分之一。通过选择恰当的音乐和环境音效，我能够为玩家营造出一种真实而又令人愉悦的游戏体验。"
 head_number = "2"
 
 [node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post2"]
@@ -78,6 +79,7 @@ metadata/Type = "内容"
 
 [node name="Post3" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
+content_text = "在我的游戏中，我最喜欢的部分是创建细节丰富的角色和他们的背景故事。每个角色都有自己的独特性格和目标，这为游戏增添了深度和情感连结。"
 head_number = "5"
 
 [node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post3"]
@@ -88,6 +90,244 @@ metadata/Type = "内容"
 metadata/Word = "RPG"
 metadata/Type = "类型"
 
+[node name="Post4" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "动态的天气系统是一项重要的功能。它不仅仅是视觉上的变化，还直接影响玩家的策略和决策。"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post4"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post4"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post5" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "刚刚发现了一个关于模拟游戏AI优化的新技术，可以显著提升游戏中NPC的行为逼真度。"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post5"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post5"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post6" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "设计一个游戏的世界地图是一项极具挑战性的任务。需要考虑的不仅是地理环境，还有文化背景和资源分布，这些元素共同塑造了游戏的整体氛围。"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post6"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post6"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post7" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "在最新的任天堂直面会上，《塞尔达传说：荒野之息2》的预告片正式发布。预告片展示了游戏的新地图和敌人类型，同时暗示了剧情发展的新方向，让粉丝们期待不已。"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post7"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post7"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post8" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "最近在家办公，发现通过使用时间管理工具能够更高效地完成工作。推荐一些你们喜欢的工具或者技巧吧！"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post8"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post8"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post9" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "刚刚尝试了一种新的烹饪风格，将亚洲和意大利美食元素结合，味道出乎意料的好！大家有没有自己的创新烹饪经验？"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post9"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post9"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post10" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "看完一本关于人工智能伦理的书籍，对未来AI发展的道德问题有了更深入的思考。你们认为AI在未来社会中的角色会是什么样的？"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post10"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post10"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post11" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "有没有人在健身房中找到了一种特别有效的锻炼方式？分享一下你们的健身心得和建议吧！"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post11"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post11"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post12" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "最近尝试了一款新的科技产品，能够帮助提高睡眠质量。觉得自己每天精力充沛，非常满意！"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post12"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post12"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post13" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "在家工作已经有一段时间了，突然意识到家里的办公环境对工作效率有很大影响。有没有人有装饰或者改善家庭办公空间的建议？"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post13"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post13"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post14" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "最近开始学习一门新的编程语言，挑战很大但也非常有趣！有没有人有学习编程的心得体会可以分享？"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post14"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post14"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post15" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "我是一个极客，最近研究了一下区块链技术。这种技术对于未来的影响可能会非常深远，你们对区块链有什么看法？"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post15"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post15"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post16" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "去了一趟远足，发现大自然真的能给人带来无限的能量和放松。大家有没有类似的体验？"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post16"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post16"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post17" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "最近开始关注环保问题，尝试减少塑料使用并推广可持续生活方式。有没有人有一些简单而有效的环保建议？"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post17"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post17"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post18" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "我最近沉迷于家庭花园的设计与种植。通过精心规划的花园布局和植物选择，我感受到了与大自然亲密连接的乐趣。"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post18"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post18"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post19" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "在旅行中学到的一些宝贵的生活经验。每一次旅行都是对心灵的一种治愈，让我更加珍惜当下和周围的人。"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post19"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post19"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
+[node name="Post20" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
+layout_mode = 2
+content_text = "如何利用科技工具来提升个人效率和生活质量？分享一些我在日常生活中使用的实用技巧和应用程序。"
+head_number = "5"
+
+[node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post20"]
+metadata/Word = "汽车"
+metadata/Type = "内容"
+
+[node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post20"]
+metadata/Word = "RPG"
+metadata/Type = "类型"
+
 [connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post" to="." method="_on_post_liked"]
 [connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post2" to="." method="_on_post_liked"]
 [connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post3" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post4" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post5" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post6" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post7" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post8" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post9" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post10" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post11" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post12" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post13" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post14" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post15" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post16" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post17" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post18" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post19" to="." method="_on_post_liked"]
+[connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post20" to="." method="_on_post_liked"]

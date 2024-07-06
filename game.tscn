@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b1tie2vwgp08j"]
+[gd_scene load_steps=22 format=3 uid="uid://b1tie2vwgp08j"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_po0t0"]
 [ext_resource type="PackedScene" uid="uid://ctde0c5f4rns1" path="res://media.tscn" id="1_ss3na"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://x1onmbvmipvw" path="res://assets/game/white.png" id="10_3sbsa"]
 [ext_resource type="Texture2D" uid="uid://c6ajvcaco27te" path="res://assets/game/coffee.png" id="11_4ihxk"]
 [ext_resource type="Theme" uid="uid://bl2g4bkbjpwd1" path="res://assets/button_themes/start_game_button_theme.tres" id="11_p1uix"]
+[ext_resource type="Texture2D" uid="uid://tjmids5niwy0" path="res://assets/game/finish.png" id="13_kcrr0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uiv07"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -22,11 +23,22 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d2kf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hrhs4"]
+texture = ExtResource("11_4ihxk")
+modulate_color = Color(0.470588, 0.470588, 0.470588, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn0t2"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kptii"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27m5i"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u544i"]
+texture = ExtResource("13_kcrr0")
+modulate_color = Color(0.650128, 0.650128, 0.650128, 1)
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -91,14 +103,6 @@ texture = ExtResource("7_dws2a")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 
-[node name="FinishButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1059.0
-offset_top = 519.0
-offset_right = 1143.0
-offset_bottom = 609.0
-text = "Finish"
-
 [node name="Clock" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -150,12 +154,22 @@ offset_bottom = 1086.0
 scale = Vector2(0.26, 0.26)
 theme = ExtResource("11_p1uix")
 theme_override_styles/normal = SubResource("StyleBoxFlat_5d2kf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_bn0t2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hrhs4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bn0t2")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_bn0t2")
 theme_override_styles/focus = SubResource("StyleBoxFlat_kptii")
 icon = ExtResource("11_4ihxk")
-flat = true
+
+[node name="FinishButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1007.0
+offset_top = 329.0
+offset_right = 1349.0
+offset_bottom = 1093.0
+scale = Vector2(0.195, 0.195)
+theme_override_styles/normal = SubResource("StyleBoxFlat_27m5i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u544i")
+icon = ExtResource("13_kcrr0")
 
 [connection signal="liked" from="Media" to="Idea" method="_on_media_liked"]
 [connection signal="button_clicked" from="Idea" to="Output" method="_on_idea_button_clicked"]
