@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ctde0c5f4rns1"]
+[gd_scene load_steps=2 format=3 uid="uid://ctde0c5f4rns1"]
+
+[ext_resource type="PackedScene" uid="uid://h0lxn246e51v" path="res://post.tscn" id="1_xnmd3"]
 
 [node name="Media" type="Control"]
 layout_mode = 3
@@ -23,51 +25,13 @@ offset_bottom = 615.395
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 400)
+[node name="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
 
-[node name="PanelContainer2" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
+[node name="Node" type="Node" parent="Panel/ScrollContainer/VBoxContainer/PanelContainer"]
+
+[node name="PanelContainer2" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
 
-[node name="PanelContainer3" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-
-[node name="PanelContainer4" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-
-[node name="PanelContainer5" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-
-[node name="PanelContainer6" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-
-[node name="PanelContainer7" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-
-[node name="PanelContainer8" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-
-[node name="PanelContainer9" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-
-[node name="PanelContainer10" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-
-[node name="PanelContainer11" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-
-[node name="PanelContainer12" type="PanelContainer" parent="Panel/ScrollContainer/VBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(400, 100)
+[node name="PanelContainer3" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
