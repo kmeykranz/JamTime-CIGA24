@@ -1,6 +1,105 @@
-[gd_scene load_steps=2 format=3 uid="uid://cadhflh3rj2x1"]
+[gd_scene load_steps=9 format=3 uid="uid://cadhflh3rj2x1"]
 
-[ext_resource type="Texture2D" uid="uid://cpaigq7qgjas8" path="res://assets/samplemanga.png" id="1_g27uf"]
+[ext_resource type="Script" path="res://scripts/display_manga.gd" id="1_y8aej"]
+[ext_resource type="Texture2D" uid="uid://lhw0ipbrgf7c" path="res://assets/menu/0706_9.png" id="2_563hv"]
+
+[sub_resource type="Animation" id="Animation_u60pj"]
+resource_name = "LeftManga_fade_in"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftManga:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7t7cm"]
+resource_name = "MiddleManga_fade_in"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MiddleManga:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bf0yp"]
+resource_name = "RightManga_fade_in"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RightManga:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ixn02"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftManga:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MiddleManga:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightManga:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j5wcd"]
+_data = {
+"LeftManga_fade_in": SubResource("Animation_u60pj"),
+"MiddleManga_fade_in": SubResource("Animation_7t7cm"),
+"RESET": SubResource("Animation_ixn02"),
+"RightManga_fade_in": SubResource("Animation_bf0yp")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_uteut"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="DisplayManga" type="Control"]
 layout_mode = 3
@@ -9,50 +108,64 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_y8aej")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="BackgroundTexture" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_563hv")
+expand_mode = 2
 
 [node name="LeftManga" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 38.0
-offset_top = 18.0
-offset_right = 4290.0
-offset_bottom = 6929.0
+offset_left = 37.0
+offset_top = 28.0
+offset_right = 4289.0
+offset_bottom = 6939.0
 grow_vertical = 2
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("1_g27uf")
+scale = Vector2(0.078, 0.078)
 
 [node name="MiddleManga" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 409.0
-offset_top = 19.0
-offset_right = 4661.0
-offset_bottom = 6930.0
+offset_left = 414.0
+offset_top = 26.0
+offset_right = 4666.0
+offset_bottom = 6937.0
 grow_vertical = 2
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("1_g27uf")
+scale = Vector2(0.078, 0.078)
 
 [node name="RightManga" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 200.0
-offset_top = 19.0
-offset_right = 4452.0
-offset_bottom = 6930.0
-grow_horizontal = 2
+offset_left = 787.0
+offset_top = 26.0
+offset_right = 5039.0
+offset_bottom = 6937.0
 grow_vertical = 2
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("1_g27uf")
+scale = Vector2(0.078, 0.078)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j5wcd")
+}
+
+[node name="ContinueLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 622.0
+offset_right = 622.0
+offset_bottom = 645.0
+text = "按任意键继续"
+label_settings = SubResource("LabelSettings_uteut")
