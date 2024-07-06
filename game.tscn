@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1tie2vwgp08j"]
+[gd_scene load_steps=4 format=3 uid="uid://b1tie2vwgp08j"]
 
 [ext_resource type="PackedScene" uid="uid://ctde0c5f4rns1" path="res://media.tscn" id="1_ss3na"]
 [ext_resource type="Script" path="res://Idea.gd" id="2_kx3pv"]
+[ext_resource type="Script" path="res://Output.gd" id="3_yb7ng"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -13,11 +14,24 @@ grow_vertical = 2
 
 [node name="Media" parent="." instance=ExtResource("1_ss3na")]
 layout_mode = 1
+offset_left = 39.0
+offset_right = 39.0
 
 [node name="Idea" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 519.0
-offset_top = 22.0
-offset_right = 1017.0
-offset_bottom = 275.0
+offset_left = 525.0
+offset_top = 24.0
+offset_right = 1023.0
+offset_bottom = 277.0
 script = ExtResource("2_kx3pv")
+
+[node name="Output" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 351.0
+offset_right = 1022.0
+offset_bottom = 586.0
+script = ExtResource("3_yb7ng")
+
+[connection signal="liked" from="Media" to="Idea" method="_on_media_liked"]
+[connection signal="button_clicked" from="Idea" to="Output" method="_on_idea_button_clicked"]
