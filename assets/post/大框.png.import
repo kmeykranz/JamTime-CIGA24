@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl0wcp7vvgm6j"
-path="res://.godot/imported/咖啡杯颜色.png-47fd4763cebe29b4a5cf60c5a2c9d01c.ctex"
+uid="uid://dgy2e81856028"
+path="res://.godot/imported/大框.png-48ddbb44e408fc7f9ab601e2abcc4929.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game/咖啡杯颜色.png"
-dest_files=["res://.godot/imported/咖啡杯颜色.png-47fd4763cebe29b4a5cf60c5a2c9d01c.ctex"]
+source_file="res://assets/post/大框.png"
+dest_files=["res://.godot/imported/大框.png-48ddbb44e408fc7f9ab601e2abcc4929.ctex"]
 
 [params]
 

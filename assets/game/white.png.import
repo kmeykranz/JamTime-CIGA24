@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be6dy34o5h6wh"
-path="res://.godot/imported/咖啡和时钟线稿.png-7408eb286014c92238f15752a1db42ef.ctex"
+uid="uid://x1onmbvmipvw"
+path="res://.godot/imported/white.png-1215e80bd83217bfeb9730f157db0ed5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game/咖啡和时钟线稿.png"
-dest_files=["res://.godot/imported/咖啡和时钟线稿.png-7408eb286014c92238f15752a1db42ef.ctex"]
+source_file="res://assets/game/white.png"
+dest_files=["res://.godot/imported/white.png-1215e80bd83217bfeb9730f157db0ed5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8dcavjoqiu27"
-path="res://.godot/imported/时钟颜色.png-b66e572e80aded1e46da3e96d4e0dd52.ctex"
+uid="uid://c64617nbesits"
+path="res://.godot/imported/头像2.png-f3893df4ea9aeb69eb0a0cbb36454414.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game/时钟颜色.png"
-dest_files=["res://.godot/imported/时钟颜色.png-b66e572e80aded1e46da3e96d4e0dd52.ctex"]
+source_file="res://assets/post/头像2.png"
+dest_files=["res://.godot/imported/头像2.png-f3893df4ea9aeb69eb0a0cbb36454414.ctex"]
 
 [params]
 

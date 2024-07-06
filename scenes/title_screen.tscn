@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhmw45mjommts"]
+[gd_scene load_steps=13 format=3 uid="uid://bhmw45mjommts"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_8odqj"]
 [ext_resource type="Texture2D" uid="uid://s2mj28vmmhwh" path="res://assets/menu/background.png" id="2_xkujk"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://c4gqkdfa7y6u2" path="res://assets/menu/moon.png" id="4_e3okd"]
 [ext_resource type="Theme" uid="uid://bl2g4bkbjpwd1" path="res://assets/button_themes/start_game_button_theme.tres" id="5_1qf4t"]
 [ext_resource type="Texture2D" uid="uid://hafjln1hm7lm" path="res://assets/menu/button.png" id="6_sv48m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qpoy2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Animation" id="Animation_u3ohw"]
 length = 0.001
@@ -166,6 +169,7 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.2, 0.2)
 theme = ExtResource("5_1qf4t")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qpoy2")
 icon = ExtResource("6_sv48m")
 flat = true
 

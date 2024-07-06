@@ -1,7 +1,7 @@
 extends Control
 
 @onready var timer: Timer = $Timer
-@onready var clock: Label = $Clock
+@onready var clock: Label = $Clock_Text
 @onready var output: Panel = $Output
 var type_num:int
 var content_num:int
