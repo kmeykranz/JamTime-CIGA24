@@ -20,6 +20,7 @@ func _on_idea_button_clicked(button: Variant) -> void:
 	var but = Button.new()
 	but.text = button.text
 	but.set_meta("Type",button.get_meta("Type"))
+	but.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(but)
 			
 	# 设置按钮的随机位置，确保不会超出面板边界

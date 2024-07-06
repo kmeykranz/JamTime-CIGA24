@@ -25,7 +25,7 @@ modulate_color = Color(0.611765, 0.611765, 0.611765, 0.552941)
 texture = ExtResource("3_l613t")
 
 [node name="Post" type="PanelContainer"]
-custom_minimum_size = Vector2(350, 400)
+custom_minimum_size = Vector2(350, 200)
 offset_right = 350.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_w18qg")
@@ -76,21 +76,22 @@ text = "名字
 
 [node name="content" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 70.0
-offset_top = 40.0
-offset_right = 177.0
-offset_bottom = 63.0
+offset_left = 69.0
+offset_top = 48.0
+offset_right = 286.0
+offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 15
 text = "帖子的内容......
 "
+autowrap_mode = 1
 
 [node name="like" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 275.0
-offset_top = 21.0
-offset_right = 751.0
-offset_bottom = 497.0
+offset_left = 279.0
+offset_top = 17.0
+offset_right = 755.0
+offset_bottom = 493.0
 scale = Vector2(0.075, 0.075)
 theme_override_styles/normal = SubResource("StyleBoxFlat_ot110")
 theme_override_styles/hover = SubResource("StyleBoxTexture_80l31")

@@ -19,6 +19,8 @@ func _ready() -> void:
 		head_rect.texture=load("res://assets/post/头像"+head_number+".png")
 	if image_path:
 		image_rect.texture=load("res://assets/image/"+image_path)
+	else:
+		size.y=200
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
