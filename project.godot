@@ -22,7 +22,7 @@ Globals="*res://scenes/globals.tscn"
 [display]
 
 window/stretch/mode="canvas_items"
-mouse_cursor/custom_image="res://assets/mouse.png"
+mouse_cursor/custom_image="res://assets/mouse4950.png"
 
 [input]
 
