@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhmw45mjommts"]
+[gd_scene load_steps=11 format=3 uid="uid://bhmw45mjommts"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_8odqj"]
+[ext_resource type="Texture2D" uid="uid://lhw0ipbrgf7c" path="res://assets/menu/0706_9.png" id="2_35173"]
+[ext_resource type="Texture2D" uid="uid://btmsppg2t354r" path="res://assets/menu/0706_5.png" id="3_mtxul"]
+[ext_resource type="Texture2D" uid="uid://dsqnv52k4idcu" path="res://assets/menu/0706_4.png" id="3_qtfrc"]
+[ext_resource type="Texture2D" uid="uid://df7wbvgublems" path="res://assets/menu/0706_6.png" id="4_4e1ab"]
+[ext_resource type="Texture2D" uid="uid://bhhbxw4ckee1j" path="res://assets/menu/0706_2.png" id="4_p88hr"]
+[ext_resource type="Texture2D" uid="uid://cr5h4p1ti1jlu" path="res://assets/menu/0706_3.png" id="5_0sryp"]
+[ext_resource type="Theme" uid="uid://bl2g4bkbjpwd1" path="res://assets/button_themes/start_game_button_theme.tres" id="5_1qf4t"]
+[ext_resource type="Texture2D" uid="uid://c56ne86jblqsx" path="res://assets/menu/0706_7.png" id="5_ghund"]
+[ext_resource type="Texture2D" uid="uid://bw5wdqlm257mm" path="res://assets/menu/0706_8.png" id="6_nk38g"]
 
 [node name="title_screen" type="Control"]
 layout_mode = 3
@@ -11,41 +20,110 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8odqj")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="BackgroundTexture" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_35173")
+expand_mode = 2
+
+[node name="Moon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mtxul")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Wing" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4e1ab")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Cloud" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ghund")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Bulb" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_nk38g")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TitleText" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qtfrc")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TitleSign" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_p88hr")
+expand_mode = 5
+stretch_mode = 4
 
 [node name="Button" type="Button" parent="."]
-custom_minimum_size = Vector2(128, 72)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -198.0
-offset_right = 64.0
-offset_bottom = -126.0
+offset_left = -91.0
+offset_top = -241.0
+offset_right = 779.0
+offset_bottom = 343.0
 grow_horizontal = 2
 grow_vertical = 0
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -120.0
-offset_right = 20.0
-offset_bottom = -80.0
-grow_horizontal = 2
-grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme = ExtResource("5_1qf4t")
+icon = ExtResource("5_0sryp")
+flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

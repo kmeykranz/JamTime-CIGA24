@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://bl2g4bkbjpwd1"]
+
+[resource]
+Button/colors/icon_focus_color = Color(0.76662, 0.76662, 0.76662, 1)
+Button/colors/icon_hover_color = Color(0.74978, 0.74978, 0.74978, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/styles/focus = null
