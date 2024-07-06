@@ -40,39 +40,38 @@ func _ready():
 
 	# 播放第一个图片的淡入动画
 	_fade_in(left_manga)
-	
-	# 创建并启动计时器
-	timer = Timer.new()
-	add_child(timer)
-	timer.timeout.connect(self._on_timer_timeout)
-	timer.start(2.0)  # 设置时间间隔（秒）
-
-func _on_timer_timeout():
-	# 根据当前步骤显示对应节点
-	match current_step:
-		1:
-			_fade_in(middle_manga)
-		2:
-			_fade_in(right_manga)
-		3:    
-			if show_ending_image:
-				animation_player.play("fade_out_to_black")
-				await animation_player.animation_finished
-				ending_image.visible = true
-				animation_player.play_backwards("fade_out_to_black")
-				continue_label.visible = true
-				set_process_input(true)
-			else:
-				continue_label.visible = true
-				set_process_input(true)
-			timer.stop()
-	# 增加步骤计数
-	current_step += 1
+	SoundManager.play_sfx("click")
+	await wait_seconds(2)
+	_fade_in(middle_manga)
+	SoundManager.play_sfx("click")
+	await wait_seconds(2)
+	_fade_in(right_manga)
+	SoundManager.play_sfx("click")  
+	await wait_seconds(4)
+	if show_ending_image:
+		animation_player.play("fade_out_to_black")
+		await animation_player.animation_finished
+		ending_image.visible = true
+		animation_player.play_backwards("fade_out_to_black")
+		continue_label.visible = true
+		set_process_input(true)
+	else:
+		continue_label.visible = true
+		set_process_input(true)
 
 func _fade_in(node: CanvasItem):
 	node.visible = true
 	animation_player.play(node.name + "_fade_in")
 
+func wait_seconds(seconds: float) -> void:
+	var timer = Timer.new()
+	timer.wait_time = seconds
+	timer.one_shot = true
+	add_child(timer)
+	timer.start()
+	await timer.timeout
+	remove_child(timer)
+	timer.queue_free()
 
 func _input(event):
 	if event is InputEventKey and event.pressed:

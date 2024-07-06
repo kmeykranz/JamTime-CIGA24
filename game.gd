@@ -3,6 +3,10 @@ extends Control
 @onready var timer: Timer = $Timer
 @onready var clock: Label = $Clock_Text
 @onready var output: Panel = $Output
+@onready var didi = $didi
+@onready var didididi = $didididi
+
+
 var type_num:int
 var content_num:int
 var time:int
@@ -38,10 +42,14 @@ func finish() -> void:
 		
 	
 func _on_button_pressed() -> void:
+	SoundManager.play_sfx("click")
 	finish()
 
 func _on_timer_timeout() -> void:
 	time+=1
 	clock.text=str(time)
 	if time==12:
+		didididi.play()
 		finish()
+	else: 
+		didi.play()

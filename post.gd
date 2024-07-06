@@ -26,6 +26,6 @@ func _process(delta: float) -> void:
 
 
 func _on_like_pressed() -> void:
-	SoundManager.play_sfx("inspire1")
+	SoundManager.play_sfx("click")
 	emit_signal("liked",self)
 	pass # Replace with function body.
