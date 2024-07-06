@@ -20,7 +20,6 @@ func _ready() -> void:
 	if image_path:
 		image_rect.texture=load("res://assets/image/"+image_path)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
