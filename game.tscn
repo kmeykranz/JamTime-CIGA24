@@ -101,7 +101,7 @@ mouse_filter = 2
 texture = ExtResource("7_dws2a")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 12.0
 
 [node name="Clock" type="TextureRect" parent="."]
 layout_mode = 1

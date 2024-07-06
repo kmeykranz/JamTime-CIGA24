@@ -8,7 +8,8 @@ var content_num:int
 var time:int
 
 func _ready() -> void:
-	time=24
+	SoundManager.play_bgm("game")
+	time=6
 	clock.text=str(time)
 	timer.start()
 	pass
@@ -40,7 +41,7 @@ func _on_button_pressed() -> void:
 	finish()
 
 func _on_timer_timeout() -> void:
-	time-=1
+	time+=1
 	clock.text=str(time)
-	if time==0:
+	if time==12:
 		finish()
