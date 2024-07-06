@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1tie2vwgp08j"]
+[gd_scene load_steps=8 format=3 uid="uid://b1tie2vwgp08j"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_po0t0"]
 [ext_resource type="PackedScene" uid="uid://ctde0c5f4rns1" path="res://media.tscn" id="1_ss3na"]
+[ext_resource type="Texture2D" uid="uid://s2mj28vmmhwh" path="res://assets/menu/background.png" id="2_hwdf3"]
 [ext_resource type="Script" path="res://Idea.gd" id="2_kx3pv"]
+[ext_resource type="Texture2D" uid="uid://iexcbe8xbk0h" path="res://assets/game/主颜色.png" id="3_6gost"]
 [ext_resource type="Script" path="res://Output.gd" id="3_yb7ng"]
+[ext_resource type="Texture2D" uid="uid://dh4eyitpfrd3y" path="res://assets/game/主线稿.png" id="7_dws2a"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -14,35 +17,76 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_po0t0")
 
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hwdf3")
+expand_mode = 2
+
+[node name="Color" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 5120.0
+offset_bottom = 2880.0
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("3_6gost")
+
 [node name="Media" parent="." instance=ExtResource("1_ss3na")]
 layout_mode = 1
-offset_left = 39.0
-offset_right = 39.0
+offset_left = 210.0
+offset_top = 79.0
+offset_right = 210.0
+offset_bottom = 79.0
+scale = Vector2(0.925, 0.925)
 
 [node name="Idea" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 525.0
-offset_top = 24.0
-offset_right = 1023.0
-offset_bottom = 277.0
+offset_left = 659.0
+offset_top = 96.0
+offset_right = 1086.0
+offset_bottom = 321.0
 script = ExtResource("2_kx3pv")
 
 [node name="Output" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 522.0
-offset_top = 351.0
-offset_right = 1022.0
-offset_bottom = 586.0
+offset_left = 657.0
+offset_top = 371.0
+offset_right = 1088.0
+offset_bottom = 577.0
 script = ExtResource("3_yb7ng")
+
+[node name="Outline" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 5120.0
+offset_bottom = 2880.0
+scale = Vector2(0.225, 0.225)
+mouse_filter = 2
+texture = ExtResource("7_dws2a")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Clock" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 414.0
+offset_right = 69.0
+offset_bottom = 542.0
+theme_override_font_sizes/font_size = 40
+text = "10"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1045.0
-offset_top = 503.0
-offset_right = 1129.0
-offset_bottom = 593.0
+offset_left = 1059.0
+offset_top = 519.0
+offset_right = 1143.0
+offset_bottom = 609.0
 text = "Finish"
 
 [connection signal="liked" from="Media" to="Idea" method="_on_media_liked"]
 [connection signal="button_clicked" from="Idea" to="Output" method="_on_idea_button_clicked"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
