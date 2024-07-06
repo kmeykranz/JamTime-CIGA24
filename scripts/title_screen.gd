@@ -12,6 +12,6 @@ func _process(delta):
 	pass
 
 func _on_button_pressed():
-	Globals.start_game()
 	SoundManager.play_sfx("click")
+	Globals.start_game()
 	print("start")
