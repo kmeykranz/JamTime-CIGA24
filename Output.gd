@@ -26,3 +26,8 @@ func _on_idea_button_clicked(button: Variant) -> void:
 	var random_x = randi() % int(panel_size.x - but.size.x)
 	var random_y = randi() % int(panel_size.y - but.size.y)
 	but.position = Vector2(random_x, random_y)
+
+	
+
+	
+

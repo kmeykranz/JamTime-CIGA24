@@ -32,33 +32,33 @@ layout_mode = 2
 
 [node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post"]
 metadata/Word = "肉鸽"
-metadata/Type = "玩法"
+metadata/Type = "类型"
 
 [node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post"]
 metadata/Word = "类银河城"
-metadata/Type = "玩法"
+metadata/Type = "类型"
 
 [node name="Post2" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
 
 [node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post2"]
-metadata/Word = "3D"
-metadata/Type = "视角"
+metadata/Word = "食物"
+metadata/Type = "内容"
 
 [node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post2"]
-metadata/Word = "2D"
-metadata/Type = "视角"
+metadata/Word = "火车"
+metadata/Type = "内容"
 
 [node name="Post3" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("1_xnmd3")]
 layout_mode = 2
 
 [node name="word" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post3"]
-metadata/Word = "肉鸽"
-metadata/Type = "玩法"
+metadata/Word = "汽车"
+metadata/Type = "内容"
 
 [node name="word2" type="Node" parent="Panel/ScrollContainer/VBoxContainer/Post3"]
-metadata/Word = "类银河城"
-metadata/Type = "玩法"
+metadata/Word = "RPG"
+metadata/Type = "类型"
 
 [connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post" to="." method="_on_post_liked"]
 [connection signal="liked" from="Panel/ScrollContainer/VBoxContainer/Post2" to="." method="_on_post_liked"]

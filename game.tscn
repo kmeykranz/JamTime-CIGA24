@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1tie2vwgp08j"]
+[gd_scene load_steps=5 format=3 uid="uid://b1tie2vwgp08j"]
 
+[ext_resource type="Script" path="res://game.gd" id="1_po0t0"]
 [ext_resource type="PackedScene" uid="uid://ctde0c5f4rns1" path="res://media.tscn" id="1_ss3na"]
 [ext_resource type="Script" path="res://Idea.gd" id="2_kx3pv"]
 [ext_resource type="Script" path="res://Output.gd" id="3_yb7ng"]
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_po0t0")
 
 [node name="Media" parent="." instance=ExtResource("1_ss3na")]
 layout_mode = 1
@@ -33,5 +35,14 @@ offset_right = 1022.0
 offset_bottom = 586.0
 script = ExtResource("3_yb7ng")
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1045.0
+offset_top = 503.0
+offset_right = 1129.0
+offset_bottom = 593.0
+text = "Finish"
+
 [connection signal="liked" from="Media" to="Idea" method="_on_media_liked"]
 [connection signal="button_clicked" from="Idea" to="Output" method="_on_idea_button_clicked"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
