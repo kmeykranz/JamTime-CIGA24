@@ -31,8 +31,14 @@ func _animate_transition_to(path):
 	
 	animation_player.play("fade-in")
 
+func play_fade_out():
+	animation_player.play_backwards("fade-in")
+
+func play_fade_in():
+	animation_player.play("fade-in")
+
 func start_game():
-	go_to_world("res://game.tscn")
+	go_to_world("res://scenes/start_manga.tscn")
 
 #到时候可以写保留什么东西等等
 func go_to_world(path):

@@ -1,15 +1,75 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhmw45mjommts"]
+[gd_scene load_steps=12 format=3 uid="uid://bhmw45mjommts"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_8odqj"]
-[ext_resource type="Texture2D" uid="uid://lhw0ipbrgf7c" path="res://assets/menu/0706_9.png" id="2_35173"]
-[ext_resource type="Texture2D" uid="uid://btmsppg2t354r" path="res://assets/menu/0706_5.png" id="3_mtxul"]
-[ext_resource type="Texture2D" uid="uid://dsqnv52k4idcu" path="res://assets/menu/0706_4.png" id="3_qtfrc"]
-[ext_resource type="Texture2D" uid="uid://df7wbvgublems" path="res://assets/menu/0706_6.png" id="4_4e1ab"]
-[ext_resource type="Texture2D" uid="uid://bhhbxw4ckee1j" path="res://assets/menu/0706_2.png" id="4_p88hr"]
-[ext_resource type="Texture2D" uid="uid://cr5h4p1ti1jlu" path="res://assets/menu/0706_3.png" id="5_0sryp"]
+[ext_resource type="Texture2D" uid="uid://s2mj28vmmhwh" path="res://assets/menu/background.png" id="2_xkujk"]
+[ext_resource type="Texture2D" uid="uid://dvi1slio8jul6" path="res://assets/menu/title.png" id="3_amemk"]
+[ext_resource type="Texture2D" uid="uid://dby3kwmp4gguq" path="res://assets/menu/cloud.png" id="3_qt7je"]
+[ext_resource type="Texture2D" uid="uid://cvbpvx67bcerw" path="res://assets/menu/titlesign.png" id="4_7adnl"]
+[ext_resource type="Texture2D" uid="uid://c4gqkdfa7y6u2" path="res://assets/menu/moon.png" id="4_e3okd"]
 [ext_resource type="Theme" uid="uid://bl2g4bkbjpwd1" path="res://assets/button_themes/start_game_button_theme.tres" id="5_1qf4t"]
-[ext_resource type="Texture2D" uid="uid://c56ne86jblqsx" path="res://assets/menu/0706_7.png" id="5_ghund"]
-[ext_resource type="Texture2D" uid="uid://bw5wdqlm257mm" path="res://assets/menu/0706_8.png" id="6_nk38g"]
+[ext_resource type="Texture2D" uid="uid://hafjln1hm7lm" path="res://assets/menu/button.png" id="6_sv48m"]
+
+[sub_resource type="Animation" id="Animation_hmvxd"]
+resource_name = "cloud_moon_fade"
+length = 9.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cloud:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.4, 5.8, 7.6, 8.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("moon:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.9, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0862745), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u3ohw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cloud:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("moon:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0862745)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7ktij"]
+_data = {
+"RESET": SubResource("Animation_u3ohw"),
+"cloud_moon_fade": SubResource("Animation_hmvxd")
+}
 
 [node name="title_screen" type="Control"]
 layout_mode = 3
@@ -27,58 +87,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_35173")
+texture = ExtResource("2_xkujk")
 expand_mode = 2
 
-[node name="Moon" type="TextureRect" parent="."]
+[node name="cloud" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -60.0
-offset_bottom = 60.0
+offset_left = 8.0
+offset_top = -47.0
+offset_right = 8.0
+offset_bottom = 73.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_mtxul")
+texture = ExtResource("3_qt7je")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="Wing" type="TextureRect" parent="."]
+[node name="moon" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.0862745)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -60.0
-offset_bottom = 60.0
+offset_left = 149.0
+offset_top = 12.0
+offset_right = 149.0
+offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_4e1ab")
-expand_mode = 5
-stretch_mode = 4
-
-[node name="Cloud" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -60.0
-offset_bottom = 60.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_ghund")
-expand_mode = 5
-stretch_mode = 4
-
-[node name="Bulb" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -60.0
-offset_bottom = 60.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_nk38g")
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_e3okd")
 expand_mode = 5
 stretch_mode = 4
 
@@ -87,11 +128,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -60.0
-offset_bottom = 60.0
+offset_left = 1.0
+offset_top = -5.0
+offset_right = 1.0
+offset_bottom = 115.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_qtfrc")
+texture = ExtResource("3_amemk")
 expand_mode = 5
 stretch_mode = 4
 
@@ -100,11 +143,11 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -60.0
-offset_bottom = 60.0
+offset_top = 5.0
+offset_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_p88hr")
+texture = ExtResource("4_7adnl")
 expand_mode = 5
 stretch_mode = 4
 
@@ -115,15 +158,21 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -91.0
-offset_top = -241.0
-offset_right = 779.0
-offset_bottom = 343.0
+offset_left = -107.0
+offset_top = -246.0
+offset_right = 797.0
+offset_bottom = 372.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.2, 0.2)
 theme = ExtResource("5_1qf4t")
-icon = ExtResource("5_0sryp")
+icon = ExtResource("6_sv48m")
 flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7ktij")
+}
+autoplay = "cloud_moon_fade"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
