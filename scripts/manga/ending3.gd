@@ -4,6 +4,7 @@ extends Control
 
 func _ready():
 	print("好的结局的脚本！！！")
+	SoundManager.play_bgm("endSuccess")
 	
 	var display_manga = preload("res://scenes/display_manga.tscn").instantiate()
 	

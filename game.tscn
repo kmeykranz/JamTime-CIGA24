@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1tie2vwgp08j"]
+[gd_scene load_steps=9 format=3 uid="uid://b1tie2vwgp08j"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_po0t0"]
 [ext_resource type="PackedScene" uid="uid://ctde0c5f4rns1" path="res://media.tscn" id="1_ss3na"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://iexcbe8xbk0h" path="res://assets/game/主颜色.png" id="3_6gost"]
 [ext_resource type="Script" path="res://Output.gd" id="3_yb7ng"]
 [ext_resource type="Texture2D" uid="uid://dh4eyitpfrd3y" path="res://assets/game/主线稿.png" id="7_dws2a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vyggy"]
+font_color = Color(1, 0, 1, 1)
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -67,7 +70,7 @@ mouse_filter = 2
 texture = ExtResource("7_dws2a")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 12.0
 
 [node name="Clock" type="Label" parent="."]
 layout_mode = 0
@@ -77,6 +80,7 @@ offset_right = 69.0
 offset_bottom = 542.0
 theme_override_font_sizes/font_size = 40
 text = "10"
+label_settings = SubResource("LabelSettings_vyggy")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

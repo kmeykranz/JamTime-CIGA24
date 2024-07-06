@@ -3,6 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SoundManager.play_bgm("title")
 	pass # Replace with function body.
 
 
@@ -12,4 +13,5 @@ func _process(delta):
 
 func _on_button_pressed():
 	Globals.start_game()
+	SoundManager.play_sfx("click")
 	print("start")

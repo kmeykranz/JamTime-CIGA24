@@ -4,6 +4,7 @@ extends Control
 
 func _ready():
 	print("太多想法/时间到了 的结局的脚本")
+	SoundManager.play_bgm("endTooMuch")
 	var display_manga = preload("res://scenes/display_manga.tscn").instantiate()
 	
 	# 设置自定义路径
