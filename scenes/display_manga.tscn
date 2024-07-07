@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cadhflh3rj2x1"]
+[gd_scene load_steps=11 format=3 uid="uid://cadhflh3rj2x1"]
 
 [ext_resource type="Script" path="res://scripts/display_manga.gd" id="1_y8aej"]
 [ext_resource type="Texture2D" uid="uid://s2mj28vmmhwh" path="res://assets/menu/background.png" id="2_2ofma"]
+[ext_resource type="Texture2D" uid="uid://dbwkdx0pnpjbl" path="res://assets/menu/biankuang.png" id="3_immuj"]
 
 [sub_resource type="Animation" id="Animation_u60pj"]
 resource_name = "LeftManga_fade_in"
@@ -154,36 +155,36 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 37.0
-offset_top = 28.0
-offset_right = 4289.0
-offset_bottom = 6939.0
+offset_left = 50.0
+offset_top = 43.0
+offset_right = 4302.0
+offset_bottom = 6835.0
 grow_vertical = 2
-scale = Vector2(0.078, 0.078)
+scale = Vector2(0.075, 0.075)
 
 [node name="MiddleManga" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 414.0
-offset_top = 26.0
-offset_right = 4666.0
-offset_bottom = 6937.0
+offset_left = 412.0
+offset_top = 43.0
+offset_right = 4679.0
+offset_bottom = 6808.0
 grow_vertical = 2
-scale = Vector2(0.078, 0.078)
+scale = Vector2(0.075, 0.075)
 
 [node name="RightManga" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 787.0
-offset_top = 26.0
-offset_right = 5039.0
-offset_bottom = 6937.0
+offset_left = 783.0
+offset_top = 42.0
+offset_right = 5023.0
+offset_bottom = 6807.0
 grow_vertical = 2
-scale = Vector2(0.078, 0.078)
+scale = Vector2(0.075, 0.075)
 
 [node name="EndingImage" type="TextureRect" parent="."]
 layout_mode = 1
@@ -215,3 +216,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
+
+[node name="LeftBiankuang" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 10.0
+offset_right = 4686.0
+offset_bottom = 8370.0
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("3_immuj")
+expand_mode = 1
+
+[node name="MiddleKuang" type="TextureRect" parent="."]
+offset_left = 397.0
+offset_top = 8.0
+offset_right = 5050.0
+offset_bottom = 8368.0
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("3_immuj")
+expand_mode = 1
+
+[node name="RightKuang" type="TextureRect" parent="."]
+offset_left = 766.0
+offset_top = 6.0
+offset_right = 5419.0
+offset_bottom = 8366.0
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("3_immuj")
+expand_mode = 1

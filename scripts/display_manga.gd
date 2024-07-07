@@ -7,6 +7,12 @@ extends Node
 @onready var ending_image: TextureRect = $EndingImage
 @onready var continue_label: Label = $ContinueLabel  # 用于显示“按任意键以继续”的Label
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var left_biankuang = $LeftBiankuang
+@onready var middle_kuang = $MiddleKuang
+@onready var right_kuang = $RightKuang
+
+
+
 
 # 自定义漫画路径
 var left_manga_path: String = ""
@@ -27,6 +33,9 @@ func _ready():
 	right_manga.visible = false
 	continue_label.visible = false
 	ending_image.visible = false
+	left_biankuang.visible = false
+	middle_kuang.visible = false
+	right_kuang.visible = false
 	
 	# 加载自定义路径的漫画图片
 	if left_manga_path != "":
@@ -39,16 +48,22 @@ func _ready():
 		ending_image.texture = load(ending_image_path)
 
 	# 播放第一个图片的淡入动画
+	left_biankuang.visible = true
 	_fade_in(left_manga)
 	SoundManager.play_sfx("click")
 	await wait_seconds(2)
+	middle_kuang.visible = true
 	_fade_in(middle_manga)
 	SoundManager.play_sfx("click")
 	await wait_seconds(2)
+	right_kuang.visible = true
 	_fade_in(right_manga)
 	SoundManager.play_sfx("click")  
 	await wait_seconds(4)
 	if show_ending_image:
+		left_biankuang.visible = false
+		middle_kuang.visible = false
+		right_kuang.visible = false
 		animation_player.play("fade_out_to_black")
 		await animation_player.animation_finished
 		ending_image.visible = true
