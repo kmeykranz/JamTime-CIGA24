@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dft7xh56icxt2"]
+[gd_scene load_steps=2 format=3 uid="uid://dft7xh56icxt2"]
 
 [ext_resource type="Script" path="res://scripts/manga/ending3.gd" id="1_t2o3l"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_lutwy"]
-font_color = Color(0, 1, 1, 1)
 
 [node name="ending3" type="Control"]
 layout_mode = 3
@@ -13,12 +10,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t2o3l")
-
-[node name="Label" type="Label" parent="."]
-z_index = 100
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "3. 灵感平衡（“大成功”结局）：
-  - 玩家在合理时间内收集适量灵感，选择合适的灵感，完成了完整的游戏设计。"
-label_settings = SubResource("LabelSettings_lutwy")

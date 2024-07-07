@@ -21,7 +21,7 @@ var happy_time:int
 
 func _ready() -> void:
 	SoundManager.play_bgm("game")
-	time=6
+	time=15
 	clock.text=str(time)
 	timer.start()
 	state=State.happy
