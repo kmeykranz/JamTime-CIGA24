@@ -7,7 +7,7 @@ extends PanelContainer
 @onready var content: Label = $Panel/content
 @onready var name_node: Label = $Panel/name
 @onready var head_rect: TextureRect = $Panel/head/TextureRect
-@onready var image_rect: TextureRect = $Panel/head/TextureRect
+@onready var image_rect: TextureRect = $Panel/image/TextureRect
 
 signal liked()
 
@@ -17,10 +17,12 @@ func _ready() -> void:
 	content.text=content_text
 	if head_number:
 		head_rect.texture=load("res://assets/post/头像"+head_number+".png")
+	
 	if image_path:
 		image_rect.texture=load("res://assets/image/"+image_path)
+		custom_minimum_size.y = 400
 	else:
-		size.y=200
+		custom_minimum_size.y = 200
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

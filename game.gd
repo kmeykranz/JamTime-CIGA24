@@ -5,17 +5,29 @@ extends Control
 @onready var output: Panel = $Output
 @onready var didi = $didi
 @onready var didididi = $didididi
+@onready var state_image: TextureRect = $State_image
+@onready var coffee_button: Button = $CoffeeButton
 
+enum State{
+	happy,
+	sad,
+}
 
+var state:State
 var type_num:int
 var content_num:int
 var time:int
+var happy_time:int
 
 func _ready() -> void:
 	SoundManager.play_bgm("game")
 	time=6
 	clock.text=str(time)
 	timer.start()
+	state=State.happy
+	happy_time=0
+	coffee_button.disabled=true
+	state_image.texture=load("res://assets/post/头像2.png")
 	pass
 
 func finish() -> void:
@@ -46,10 +58,23 @@ func _on_button_pressed() -> void:
 	finish()
 
 func _on_timer_timeout() -> void:
-	time+=1
+	time-=1
 	clock.text=str(time)
-	if time==12:
+	if time==0:
 		didididi.play()
 		finish()
 	else: 
 		didi.play()
+		
+	happy_time+=1
+	if happy_time==2:
+		state=State.sad
+		state_image.texture=load("res://assets/post/头像1.png")
+		coffee_button.disabled=false
+
+func _on_coffee_button_pressed() -> void:
+	state=State.happy
+	happy_time=0
+	state_image.texture=load("res://assets/post/头像2.png")
+	coffee_button.disabled=true
+	

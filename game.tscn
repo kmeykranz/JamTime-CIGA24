@@ -110,20 +110,24 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 587.0
+offset_top = 459.0
+offset_right = -469.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("8_en80w")
-expand_mode = 2
+expand_mode = 1
 
 [node name="Clock_Text" type="Label" parent="."]
 layout_mode = 0
-offset_left = 71.0
-offset_top = 320.0
-offset_right = 125.0
-offset_bottom = 398.0
+offset_left = 623.0
+offset_top = 503.0
+offset_right = 677.0
+offset_bottom = 581.0
 theme_override_font_sizes/font_size = 40
-text = "10"
+text = "6"
 
 [node name="Text" type="TextureRect" parent="."]
 layout_mode = 1
@@ -158,7 +162,7 @@ theme = ExtResource("11_p1uix")
 theme_override_styles/normal = SubResource("StyleBoxFlat_5d2kf")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hrhs4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bn0t2")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_bn0t2")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_hrhs4")
 theme_override_styles/focus = SubResource("StyleBoxFlat_kptii")
 icon = ExtResource("11_4ihxk")
 
@@ -173,6 +177,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_27m5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_u544i")
 icon = ExtResource("13_kcrr0")
 
+[node name="State_image" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 45.0
+offset_right = 138.0
+offset_bottom = 133.0
+expand_mode = 1
+
 [node name="didi" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_1xcds")
 volume_db = 6.0
@@ -184,4 +196,6 @@ volume_db = 6.0
 [connection signal="liked" from="Media" to="Idea" method="_on_media_liked"]
 [connection signal="button_clicked" from="Idea" to="Output" method="_on_idea_button_clicked"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CoffeeButton" to="." method="_on_coffee_button_pressed"]
+[connection signal="pressed" from="CoffeeButton" to="CoffeeButton" method="_on_pressed"]
 [connection signal="pressed" from="FinishButton" to="." method="_on_button_pressed"]
