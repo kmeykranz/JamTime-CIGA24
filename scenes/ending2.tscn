@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://phi4jb3kheyo"]
+[gd_scene load_steps=3 format=3 uid="uid://phi4jb3kheyo"]
 
 [ext_resource type="Script" path="res://scripts/manga/ending2.gd" id="1_5ubha"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tjhjh"]
+font_color = Color(0, 1, 1, 1)
 
 [node name="ending2" type="Control"]
 layout_mode = 3
@@ -10,3 +13,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5ubha")
+
+[node name="Label" type="Label" parent="."]
+z_index = 100
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "灵感疲劳（“完成度低”结局）：
+  - 灵感不足"
+label_settings = SubResource("LabelSettings_tjhjh")

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwmnifxnsrmam"]
+[gd_scene load_steps=3 format=3 uid="uid://bwmnifxnsrmam"]
 
 [ext_resource type="Script" path="res://scripts/manga/ending1.gd" id="1_ngfum"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oh14o"]
+font_color = Color(0, 1, 1, 1)
 
 [node name="ending1" type="Control"]
 layout_mode = 3
@@ -10,3 +13,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ngfum")
+
+[node name="Label" type="Label" parent="."]
+z_index = 100
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "1. 无限浏览（“无法完成”结局）：
+  - 提交时灵感过多或未能提交"
+label_settings = SubResource("LabelSettings_oh14o")
