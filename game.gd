@@ -42,10 +42,10 @@ func finish() -> void:
 			content_num+=1
 	
 	#结局分支逻辑（在这里放结局切换）
-	if type_num<1||content_num<6:
+	if content_num<6:
 		print("完成度低")
 		Globals.go_to_world("res://scenes/ending2.tscn")
-	elif type_num>4||content_num>12:
+	elif type_num>4 or content_num>12:
 		print("无法完成")
 		Globals.go_to_world("res://scenes/ending1.tscn")
 	else:
